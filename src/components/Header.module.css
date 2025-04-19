@@ -1,0 +1,101 @@
+.header {
+  background-color: #f4f4f4;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative; /* Adicionado para garantir que o menu use a posição do header */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2f4f4f;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.3s ease; /* Adiciona transição suave */
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: #2e8b57;
+}
+
+/* Botão do menu hamburguer (visível só em telas pequenas) */
+.menuToggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #2f4f4f;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .menuToggle {
+    display: block;
+  }
+
+  .nav {
+    display: none; /* Inicia como invisível */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 14rem; /* Posiciona o menu no centro */
+    transform: translateX(-50%); /* Ajusta o menu para o centro */
+    width: 250px; /* Ajuste a largura do menu */
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    border-radius: 0.5rem; /* Adicionando o border-radius para deixar o menu mais bonito */
+  }
+
+  .showNav {
+    display: flex; /* Torna o menu visível */
+  }
+
+  .nav a {
+    margin: 0.5rem 0;
+  }
+
+  .menuToggle {
+    display: block;
+    font-size: 1.5rem;
+    background: #fff;  /* fundo branco */
+    border: none;
+    border-radius: 50%;  /* bordas arredondadas */
+    padding: 0.8rem;  /* tamanho adequado para o ícone */
+    cursor: pointer;
+    color: #2f4f4f;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* transições suaves */
+  }
+  
+  .menuToggle:hover {
+    background-color: #e0f7fa;  /* cor de fundo ao passar o mouse */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);  /* sombra mais forte no hover */
+  }
+  
+  .menuToggle:active {
+    transform: scale(0.95);  /* efeito de "pressionar" */
+    background-color: #b2ebf2;  /* cor de fundo ao clicar */
+  }
+  
+}

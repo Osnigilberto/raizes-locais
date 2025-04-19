@@ -1,0 +1,14 @@
+.body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fdfdfd;
+    color: #222;
+  }
+  
+  .main {
+    min-height: 80vh;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
