@@ -1,4 +1,6 @@
+// app/atracoes/page.jsx
 import styles from './page.module.css';
+import Link from 'next/link';
 
 const atracoes = [
   {
@@ -27,11 +29,11 @@ export default function AtracoesPage() {
       <h2 className={styles.title}>Atrações de Antônio Carlos</h2>
       <div className={styles.grid}>
         {atracoes.map((item) => (
-          <div key={item.id} className={styles.card}>
-            <img src={item.imagem} alt={item.nome} className={styles.imagem} />
+          <Link key={item.id} href={`/atracoes/${item.id}`} className={styles.card}>
+            <img src={item.imagem} alt={item.nome} className={styles.imagemCard} />
             <h3>{item.nome}</h3>
             <p>{item.descricao}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

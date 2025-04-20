@@ -1,37 +1,72 @@
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  
-  .title {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Aumenta a sombra no hover */
+}
+
+.imagem {
+  width: 100%;
+  height: 200px; /* Ajuste a altura para manter proporções consistentes */
+  object-fit: cover; /* Garantir que a imagem ocupe todo o espaço sem distorção */
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+.card .title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.card .descricao {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
   .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
-  
+
   .card {
-    background-color: #fff;
     padding: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease;
   }
-  
-  .card:hover {
-    transform: translateY(-5px);
+
+  .title {
+    font-size: 1.6rem;
   }
-  
+
   .imagem {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 0.8rem;
+    height: 180px; /* Reduzir a altura em telas menores */
   }
-  
+}

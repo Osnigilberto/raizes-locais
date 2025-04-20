@@ -1,0 +1,62 @@
+/* page.module.css da página [id] */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.imagemDetalhe { /* Renomeado para evitar conflitos */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.descricao {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  color: #0070f3;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.voltar:hover {
+  color: #0051a3;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .descricao {
+    font-size: 1rem;
+  }
+
+  .imagem {
+    max-height: 300px; /* Adiciona um limite máximo de altura em telas menores */
+  }
+}

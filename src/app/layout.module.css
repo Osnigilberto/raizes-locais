@@ -12,3 +12,21 @@
     margin: 0 auto;
   }
   
+  /* layout.module.css */
+.themeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1000;
+}
+
+.themeToggle:hover {
+  background-color: #005bb5;
+}
