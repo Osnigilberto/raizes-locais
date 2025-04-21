@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Raízes Locais 🌱
 
-## Getting Started
+**Raízes Locais** é uma plataforma de descoberta de atrações turísticas e culturais no Brasil. O projeto foi desenvolvido com o objetivo de conectar os usuários às raízes culturais e naturais do país, oferecendo uma experiência de fácil acesso a informações sobre diversos locais, suas histórias e muito mais.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📜 Descrição
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O projeto **Raízes Locais** é uma aplicação web responsiva, construída utilizando **Next.js** para o front-end e algumas ferramentas e bibliotecas adicionais para garantir uma experiência moderna e interativa. O site é focado em ser intuitivo e acessível para qualquer usuário que queira explorar as atrações culturais e naturais do Brasil.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Funcionalidades
 
-## Learn More
+### Página Inicial
+- Exibição de um **carrossel de atrações**.
+- Links rápidos para seções como **Atrações**, **Sobre Nós**, e **Fale Conosco**.
+  
+### Página de Atrações
+- Apresentação de uma lista de **atrações culturais** com informações detalhadas.
+- Cada atração possui uma página de detalhes com informações como:
+  - Nome
+  - Descrição
+  - Imagem
+  - Endereço
+  - Horário
+  - Contato
+  - Mapa incorporado (com o local da atração).
 
-To learn more about Next.js, take a look at the following resources:
+### Formulário de Contato
+- **Formulário de contato** para permitir que os usuários entrem em contato diretamente com os administradores da plataforma.
+- O formulário inclui campos para:
+  - Nome
+  - Email
+  - Mensagem
+  
+### Footer
+- Informações de contato (email, telefone).
+- Links para redes sociais (Instagram, Facebook).
+- Detalhes de direitos autorais e créditos ao desenvolvedor.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠 Tecnologias Utilizadas
 
-## Deploy on Vercel
+- **Next.js**: Framework para React, utilizado para construir a aplicação de maneira eficiente e otimizada.
+- **Lucide Icons**: Conjunto de ícones simples e personalizáveis para os links de redes sociais e outros elementos da interface.
+- **Framer Motion**: Biblioteca para animações suaves e interativas no site.
+- **CSS Modules**: Utilizado para manter o estilo de cada componente isolado e modular.
+- **Firebase** (futuro): Planejado para ser integrado para validação de dados e escalabilidade do sistema.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌍 Acessibilidade e Responsividade
+
+- **Design Responsivo**: A aplicação foi projetada para ser funcional e visualmente agradável em dispositivos móveis, tablets e desktops.
+- **Acessibilidade**: Foco na experiência do usuário, com suporte para navegação fácil, animações suaves e uma estrutura intuitiva.
+
+---
+
+## ⚙️ Como Rodar o Projeto
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/OsniFerreira/raizes-locais.git
+
+## 👨‍💻 Desenvolvedor
+
+- **Osni Gilberto**  
+  Desenvolvedor do projeto: [Portfolio](https://osni-portfolio.netlify.app/)  
+  GitHub: [OsniFerreira](https://github.com/Osnigilberto)  
+  LinkedIn: [osnigilbertojunior](https://www.linkedin.com/in/osnigilbertojunior/)
+
+
+📚 Licença
+Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para mais detalhes.

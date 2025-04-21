@@ -1,0 +1,83 @@
+.container {
+    padding: 3rem 2rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: justify;
+  }
+  
+  .team {
+    margin-top: 3rem;
+  }
+  
+  .team h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .teamMember {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;  /* Isso permite que os membros da equipe se ajustem conforme o espaço disponível */
+    justify-content: center;
+  }
+  
+  .teamImage {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .teamMember p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2rem; /* Tamanho da fonte reduzido para dispositivos móveis */
+    }
+  
+    .description {
+      font-size: 1rem;
+    }
+  
+    .team h3 {
+      font-size: 1.5rem;
+    }
+  
+    .teamMember {
+      flex-direction: column; /* Torna os membros da equipe empilhados em dispositivos móveis */
+      gap: 1rem;
+    }
+  
+    .teamImage {
+      width: 70px; /* Tamanho da imagem reduzido em dispositivos móveis */
+      height: 70px;
+    }
+  
+    .teamMember p {
+      font-size: 1rem; /* Tamanho da fonte reduzido para dispositivos móveis */
+    }
+  }
+  

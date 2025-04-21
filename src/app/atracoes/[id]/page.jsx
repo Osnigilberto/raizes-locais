@@ -1,5 +1,5 @@
-// app/atracoes/[id]/page.jsx
 'use client';
+import { useState, useEffect } from 'react';
 import styles from '../page.module.css';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -11,7 +11,7 @@ const atracoes = [
     id: 1,
     nome: 'Cachoeira do Vale Verde',
     descricao: 'Uma bela queda d’água escondida no meio da mata atlântica.',
-    imagem: '/cachoeira.jpg',
+    imagensExtras: ['/cachoeira.jpg', '/cachoeira1.jpg'],
     endereco: 'Estrada da Natureza, km 12 - Zona Rural',
     horario: 'Todos os dias, das 8h às 17h',
     contato: '(48) 99999-1234',
@@ -21,7 +21,7 @@ const atracoes = [
     id: 2,
     nome: 'Mirante da Serra',
     descricao: 'Vista panorâmica de tirar o fôlego.',
-    imagem: '/mirante.jpg',
+    imagensExtras: ['/mirante.jpg', '/mirante1.jpg'],
     endereco: 'Rua do Mirante, 100 - Bairro Alto',
     horario: 'Todos os dias, das 6h às 19h',
     contato: '(48) 98888-5678',
@@ -31,7 +31,7 @@ const atracoes = [
     id: 3,
     nome: 'Alambique do Zé',
     descricao: 'Tradição e sabor na produção de cachaça artesanal.',
-    imagem: '/alambique.jpg',
+    imagensExtras: ['/alambique.jpg'],
     endereco: 'Rodovia AC-45, km 5 - Sítio do Zé',
     horario: 'Seg a Sáb, das 9h às 18h',
     contato: '(48) 97777-4321',
@@ -54,15 +54,44 @@ export default function AtracaoPage() {
     notFound();
   }
 
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    if (atracao.imagensExtras.length > 1) {
+      const interval = setInterval(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % atracao.imagensExtras.length);
+      }, 6000); // Troca a imagem a cada 6 segundos
+
+      return () => clearInterval(interval); // Limpa o intervalo quando o componente é desmontado
+    }
+  }, [atracao.imagensExtras.length]);
+
   return (
     <div className={styles.container}>
-      <img
-        src={atracao.imagem}
-        alt={atracao.nome}
-        className={styles.imagemDetalhe}
-      />
       <h2 className={styles.title}>{atracao.nome}</h2>
       <p className={styles.descricao}>{atracao.descricao}</p>
+
+      {atracao.imagensExtras && (
+        <div className={styles.galeria}>
+          <img
+            src={atracao.imagensExtras[currentImageIndex]}
+            alt={`Imagem extra ${currentImageIndex + 1} de ${atracao.nome}`}
+            className={styles.galeriaImagem}
+          />
+        </div>
+      )}
+
+      {/* Indicadores de imagem */}
+      {atracao.imagensExtras.length > 1 && (
+        <div className={styles.indicadores}>
+          {atracao.imagensExtras.map((_, index) => (
+            <span
+              key={index}
+              className={`${styles.indicador} ${currentImageIndex === index ? styles.ativo : ''}`}
+            ></span>
+          ))}
+        </div>
+      )}
 
       <div className={styles.infoExtras}>
         <h3>Informações</h3>
