@@ -73,5 +73,6 @@ O projeto **Raízes Locais** é uma aplicação web responsiva, construída util
   LinkedIn: [osnigilbertojunior](https://www.linkedin.com/in/osnigilbertojunior/)
 
 
-📚 Licença
-Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para mais detalhes.
+## 📚 Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
